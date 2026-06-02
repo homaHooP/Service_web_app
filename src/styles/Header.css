@@ -1,0 +1,135 @@
+.header {
+    width: 100%;
+    height: 68px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--color-background-primary);
+    border-bottom: 0.5px solid var(--color-border-secondary);
+
+    box-sizing: border-box;
+    font-family: 'DM Sans', var(--font-sans);
+}
+
+.company-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.company-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.company-subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+    margin: 0;
+}
+
+.user-container {
+    min-width: 180px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 0 8px;
+
+    background: var(--color-background-primary);
+    border-radius: var(--border-radius-lg);
+
+    transition: border-color 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.user-container:hover {
+    border-color: var(--color-border-primary);
+}
+
+.user-container:focus-within {
+    border-color: var(--color-border-primary);
+    box-shadow: 0 0 0 3px rgba(128,128,128,0.08);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.user-role {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.user-avatar {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.logout-btn {
+    height: 32px;
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0.5px solid rgba(226, 75, 74, 0.25);
+    border-radius: var(--border-radius-md);
+
+    background: rgb(232 14 13 / 0.04);
+    color: #A32D2D;
+
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'DM Sans', var(--font-sans);
+
+    cursor: pointer;
+    transition:
+            background-color 0.15s,
+            border-color 0.15s,
+            transform 0.1s,
+            opacity 0.15s;
+}
+
+.logout-btn:hover {
+    background: rgb(232 14 13 / 0.08);
+    border-color: rgba(226, 75, 74, 0.4);
+}
+
+.logout-btn:active {
+    transform: scale(0.98);
+    opacity: 0.85;
+}
+
+.logout-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(226, 75, 74, 0.12);
+}

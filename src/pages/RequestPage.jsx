@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getRequest,deleteRequestHistory,updateRequestHistory,updateRequestComments,updateRequestStatus } from "../api/requestApi.js";
 import { useAuth } from "../hooks/AuthContext.jsx";
+import NotFound from "../pages/NotFoundPage.jsx";
 
 function Request(){
     const {id} = useParams();
@@ -21,12 +22,6 @@ function Request(){
         }
         fetchRequest();
     },[id]);
-
-    function Error(){
-        return(
-            <div className="error-box">{error}</div>
-        )
-    }
 
     function Contains() {
         const [comment, setComment] = useState("");
@@ -224,7 +219,7 @@ function Request(){
     }
 
     return (
-        error !== "" ? <Error/> : <Contains/>
+        error !== "" ? <NotFound message={error}/> : <Contains/>
     );
 }
 

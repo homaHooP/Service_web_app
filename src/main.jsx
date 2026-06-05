@@ -7,7 +7,7 @@ async function deferRender () {
     const {worker} = await import('./mocks/browser.js');
     return worker.start({
         serviceWorker: {
-            url: "/mockServiceWorker.js"
+            url: "/Service_web_app/mockServiceWorker.js"
         },
         onUnhandledRequest(req) {
 

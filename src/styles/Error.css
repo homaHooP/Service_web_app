@@ -1,0 +1,42 @@
+.error {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.error-message {
+    margin: 0;
+
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+
+    color: #1a1a1a;
+}
+
+.error-code {
+    margin-top: 12px;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    color: #1a1a1a;
+}
+
+.error::before {
+    content: "⚠";
+
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+    opacity: 0.8;
+}

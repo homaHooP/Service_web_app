@@ -50,9 +50,12 @@ function Login() {
             }
         }
         catch (error) {
+            const message =
+                error.response?.data?.message ||
+                error.message;
+
             setError("root", {
-                message:
-                    error.message
+                message
             });
         }
     }

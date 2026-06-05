@@ -1,6 +1,6 @@
 export const categories = [
-    "hardware",
+    "Hardware",
     "OS",
-    "software",
+    "Software",
     "other"
 ]

@@ -1,7 +1,7 @@
 import {api} from "./Client.js"
 
 export async function getRequests() {
-    return await api.get("/requests/all")
+    return await api.get("/requests/all");
 }
 export async function getMyRequests() {
     return await api.get(`/requests/my`);

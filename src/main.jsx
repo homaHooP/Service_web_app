@@ -10,13 +10,11 @@ async function deferRender () {
             url: "/mockServiceWorker.js"
         },
         onUnhandledRequest(req) {
-
-            if (req.url.includes("/api/")) {
-                console.warn(
-                    `Unhandled API request: ${req.method} ${req.url}`
-                );
-            }
-
+            console.error(
+                "[UNHANDLED]",
+                req.method,
+                req.url
+            );
         }
     });
 }

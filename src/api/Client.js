@@ -14,3 +14,29 @@ api.interceptors.request.use((config) => {
 
     return config;
 });
+
+api.interceptors.request.use((config) => {
+
+    console.log(
+        "[REQUEST]",
+        config.method?.toUpperCase(),
+        config.baseURL + config.url
+    );
+
+    return config;
+});
+
+api.interceptors.response.use(
+    (response) => response,
+    (error) => {
+
+        console.error(
+            "[RESPONSE ERROR]",
+            error.response?.status,
+            error.config?.method?.toUpperCase(),
+            error.config?.url
+        );
+
+        return Promise.reject(error);
+    }
+);
